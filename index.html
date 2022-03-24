@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="tab">
+      <button id="defaultOpen" class="tablink" onclick="openPage('bg1', this, 'red')">
+        JS 1
+      </button>
+
+      <button
+        class="tablink"
+        onclick="openPage('bg2', this, 'green')"
+      >
+        JS 2
+      </button>
+      <button class="tablink" onclick="openPage('bg3', this, 'blue')">
+        JS 3
+      </button>
+      <button class="tablink" onclick="openPage('bg4', this, 'orange')">
+        JS 4
+      </button>
+    </div>
+
+    <div id="bg1" class="tabcontent">
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">BÀI TẬP JS SỐ 1</h1>
+            </div>
+            <div class="col-12">
+              <div
+                class="card"
+                style="background-color: cadetblue; border-color: darkblue"
+              >
+                <img class="card-img-top" src="./img/screenshot_1.png" alt="" />
+                <div class="card-body py-5">
+                  <div id="ftThongBao_1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+            </div>
+            <div class="card-footer text-muted">
+              <button id="btnInSoNguyen" class="btn btn-success">In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bg2" class="tabcontent">
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">BÀI TẬP JS SỐ 2</h1>
+            </div>
+            <div class="col-12">
+              <div
+                class="card"
+                style="background-color: cadetblue; border-color: darkblue"
+              >
+                <img class="card-img-top" src="./img/screenshot_2.png" alt="" />
+                <div class="card-body py-5">
+                  <div id="ftThongBao_2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label>Số Nguyên Dương Thứ X</label>
+                <input type="text" class="form-control" id="x" />
+                <label>Số Nguyên Dương Thứ N</label>
+                <input type="text" class="form-control" id="n" />
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              <button id="btn_xuat" class="btn btn-success">Tính Tổng</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bg3" class="tabcontent">
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">BÀI TẬP JS SỐ 3</h1>
+            </div>
+            <div class="col-12">
+              <div
+                class="card"
+                style="background-color: cadetblue; border-color: darkblue"
+              >
+                <img class="card-img-top" src="./img/screenshot_3.png" alt="" />
+                <div class="card-body py-5">
+                  <div id="ftThongBao_3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label>Nhập số N</label>
+                <input type="text" class="form-control" id="nhapN" />
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              <button id="btnTinhGT" class="btn btn-success">Tính Giai Thừa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bg4" class="tabcontent">
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">BÀI TẬP JS SỐ 4</h1>
+            </div>
+            <div class="col-12">
+              <div
+                class="card"
+                style="background-color: cadetblue; border-color: darkblue"
+              >
+                <img class="card-img-top" src="./img/screenshot_4.png" alt="" />
+                <div class="card-body py-3">
+                  <div class="card">
+                    <div class="card-footer text-muted">
+                      <button id="btnInSoChanLe" class="btn btn-success">
+                        Tạo Div
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div id="ftThongBao_4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+          tablinks[i].style.color = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/BT-1.js"></script>
+    <script src="./JS/BT-2.js"></script>
+    <script src="./JS/BT-3.js"></script>
+    <script src="./JS/BT-4.js"></script>
+  </body>
+</html>

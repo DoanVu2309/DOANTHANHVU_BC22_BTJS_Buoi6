@@ -1,0 +1,63 @@
+.tab {
+  float: left;
+  background-color: #f1f1f1;
+  width: 5%;
+  height: 300px;
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  width: 25%;
+  display: block;
+  padding: 25px 16px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 95%;
+  border-left: none;
+  height: 302px;
+}
+
+.tab button {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  text-align: center;
+}
+
+#bg1 {
+  background-color: red;
+}
+#bg2 {
+  background-color: green;
+}
+#bg3 {
+  background-color: blue;
+}
+#bg4 {
+  background-color: orange;
+}
+
+
+.mystyle_chan{
+  background-color: red;
+  font-size: 20px;
+  color: white;
+}
+.mystyle_le{
+  background-color: blue;
+  font-size: 20px;
+  color: white;
+}
