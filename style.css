@@ -24,7 +24,7 @@
   border: 1px solid #ccc;
   width: 95%;
   border-left: none;
-  height: 302px;
+  height: 378px;
 }
 
 .tab button {
@@ -49,6 +49,10 @@
 #bg4 {
   background-color: orange;
 }
+#bg5 {
+  background-color: aqua;
+}
+
 
 
 .mystyle_chan{

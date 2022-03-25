@@ -20,14 +20,15 @@
   </head>
   <body>
     <div class="tab">
-      <button id="defaultOpen" class="tablink" onclick="openPage('bg1', this, 'red')">
+      <button
+        id="defaultOpen"
+        class="tablink"
+        onclick="openPage('bg1', this, 'red')"
+      >
         JS 1
       </button>
 
-      <button
-        class="tablink"
-        onclick="openPage('bg2', this, 'green')"
-      >
+      <button class="tablink" onclick="openPage('bg2', this, 'green')">
         JS 2
       </button>
       <button class="tablink" onclick="openPage('bg3', this, 'blue')">
@@ -35,6 +36,9 @@
       </button>
       <button class="tablink" onclick="openPage('bg4', this, 'orange')">
         JS 4
+      </button>
+      <button class="tablink" onclick="openPage('bg5', this, 'aqua')">
+        JS 5
       </button>
     </div>
 
@@ -60,8 +64,7 @@
         </div>
         <div class="col-6">
           <div class="card">
-            <div class="card-body">
-            </div>
+            <div class="card-body"></div>
             <div class="card-footer text-muted">
               <button id="btnInSoNguyen" class="btn btn-success">In</button>
             </div>
@@ -137,7 +140,9 @@
               </div>
             </div>
             <div class="card-footer text-muted">
-              <button id="btnTinhGT" class="btn btn-success">Tính Giai Thừa</button>
+              <button id="btnTinhGT" class="btn btn-success">
+                Tính Giai Thừa
+              </button>
             </div>
           </div>
         </div>
@@ -145,7 +150,7 @@
     </div>
 
     <div id="bg4" class="tabcontent">
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-6">
           <div class="row">
             <div class="col-12">
@@ -172,6 +177,44 @@
         </div>
         <div class="col-6">
           <div id="ftThongBao_4"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bg5" class="tabcontent">
+      <div class="row mt-3">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">BÀI TẬP JS SỐ 5</h1>
+            </div>
+            <div class="col-12">
+              <div
+                class="card"
+                style="background-color: cadetblue; border-color: darkblue"
+              >
+                <img class="card-img-top" src="./img/screenshot_5.png" alt="" />
+                <div class="card-body py-5">
+                  <div id="ftThongBao_5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label>Nhập số nguyên tố</label>
+                <input type="text" class="form-control" id="txt_soNguyenTo" />
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              <button id="btnInSoNguyenTo" class="btn btn-success">
+                In Số Nguyên Tố
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -216,5 +259,6 @@
     <script src="./JS/BT-2.js"></script>
     <script src="./JS/BT-3.js"></script>
     <script src="./JS/BT-4.js"></script>
+    <script src="./JS/BT-5.js"></script>
   </body>
 </html>
